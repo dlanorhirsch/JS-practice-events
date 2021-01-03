@@ -12,7 +12,8 @@ var EventTarget = function() {
 // An empty listeners object is created and assigned to the variable EventTarget (capitalized because this is a constructor function)
 
 EventTarget.prototype.listeners = null;
-// Puzzled by this line. If EventTarget = a function that creates and empty listeners object, this line of code assigns a null value to its prototype type.  Note: If prototype is an object, I assume it can be assigned a null value...
+/* Puzzled by this line. If EventTarget = a function that creates and empty listeners object, this line of code assigns a null value to its prototype type.  Note: If prototype is an object, I assume it can be assigned a null value
+*/
 
 EventTarget.prototype.addEventListener = function(type, callback) {
   if (!(type in this.listeners)) {
